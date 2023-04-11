@@ -17,10 +17,21 @@ public class CuentaBancaria {
     public double getSaldo(){
         return saldo;
     }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    public void setUsuario(Usuario titular){
+        this.titular = titular;
+    }
+
     public void depositar(double saldoADepositar){
-        if (saldoADepositar <=0){
-            throw new IllegalArgumentException("La cantidad a depositar debe ser mayor a cero");
+        if (saldoADepositar <= 0){
+            throw new IllegalArgumentException("La cantidad a depositar debe ser mayor que cero.");
         }
         saldo += saldoADepositar;
     }
+
+
 }
